@@ -1,0 +1,55 @@
+
+/* Reset default margin and padding */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* Page container */
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Header */
+.header {
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Bill table */
+.bill-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.bill-table th,
+.bill-table td {
+border: 1px solid #ccc;
+padding: 10px;
+text-align: left;
+}
+
+.bill-table th {
+background-color: #f2f2f2;
+}
+
+/* Add bill button */
+.add-bill-btn {
+margin-top: 20px;
+}
+
+.add-bill-btn button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+/* Footer */
+.footer {
+margin-top: 20px;
+text-align: center;
+}

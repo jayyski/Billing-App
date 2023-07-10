@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bill Manager</title>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bill Manager</h1>
+    </div>
+
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th>Due Date</th>
+          <th>Bill Name</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for bill in bills %}
+          <tr>
+            <td>{{ bill.date }}</td>
+            <td>{{ bill.bill_name }}</td>
+            <td>{{ bill.amount }}</td>
+            <td>
+              <a href="{% url 'delete' bill.id %}">Delete</a>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <a href="{% url 'form' %}">Add Bill</a>
+    </div>
+  </div>
+</body>
+</html>
